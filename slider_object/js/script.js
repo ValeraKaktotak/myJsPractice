@@ -5,31 +5,36 @@ var slider = {
     currentIndex: 0,
 
     sliderInit: function () {
-        this.sliderPrevBtn.addEventListener('click', this.actionPrev);
-        this.sliderNextBtn.addEventListener('click', this.actionNext);
+        var that = this;
+        this.sliderPrevBtn.addEventListener('click', function(e){
+            that.actionPrev(e);
+        });
+        this.sliderNextBtn.addEventListener('click', function(e){
+            that.actionNext(e);
+        });
     },
 
     actionPrev: function (event) {
-        currentItem: this.sliderImages[this.currentIndex];
+        var currentItem = this.sliderImages[this.currentIndex];
         currentItem.classList.remove('active');
         if (this.currentIndex === 0) {
             this.currentIndex = this.sliderImages.length - 1;
         } else {
             this.currentIndex--;
         }
-        currentItem: this.sliderImages[currentIndex];
+        currentItem = this.sliderImages[this.currentIndex];
         currentItem.classList.add('active');
 
     },
     actionNext: function (event) {
-        currentItem: this.sliderImages[currentIndex];
+        var currentItem = this.sliderImages[this.currentIndex];
         currentItem.classList.remove('active');
         if (this.currentIndex === this.sliderImages.length - 1) {
             this.currentIndex = 0;
         } else {
             this.currentIndex++;
         }
-        currentItem: this.sliderImages[currentIndex];
+        currentItem = this.sliderImages[this.currentIndex];
         currentItem.classList.add('active');
     },
 }
