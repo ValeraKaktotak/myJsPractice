@@ -1,7 +1,7 @@
-var slider = {
-    sliderImages: document.querySelectorAll('.my_slider .slider_image'),
-    sliderPrevBtn: document.getElementById('prev_btn'),
-    sliderNextBtn: document.getElementById('next_btn'),
+var slider2 = {
+    sliderImages: document.querySelectorAll('#slider2.my_slider .slider_image'),
+    sliderPrevBtn: document.getElementById('prev_btn2'),
+    sliderNextBtn: document.getElementById('next_btn2'),
     currentIndex: 0,
 
     sliderInit: function () {
