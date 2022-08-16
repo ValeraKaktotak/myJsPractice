@@ -5,11 +5,19 @@ var slider = {
     currentIndex: 0,
 
     sliderInit: function () {
+        // this.sliderPrevBtn.addEventListener('click', this.actionPrev.bind(this));
+        // this.sliderNextBtn.addEventListener('click', this.actionNext.bind(this));
+
+        // this.sliderPrevBtn.addEventListener('click', this.actionPrev);
+        // this.sliderNextBtn.addEventListener('click', this.actionNext);
+
         var that = this;
-        this.sliderPrevBtn.addEventListener('click', function(e){
+
+        this.sliderPrevBtn.addEventListener('click', function (e) {
             that.actionPrev(e);
         });
-        this.sliderNextBtn.addEventListener('click', function(e){
+
+        this.sliderNextBtn.addEventListener('click', function (e) {
             that.actionNext(e);
         });
     },
