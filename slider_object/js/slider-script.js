@@ -11,7 +11,6 @@ function Slider(){
         // this.sliderPrevBtn.addEventListener('click', this.actionPrev);
         // this.sliderNextBtn.addEventListener('click', this.actionNext);
 
-        debugger;
         this.idElem = document.querySelector(el)
         this.sliderImages = this.idElem.querySelectorAll('.slider_image');
         this.sliderPrevBtn = this.idElem.querySelector('.prev_btn');
@@ -52,3 +51,14 @@ function Slider(){
         currentItem.classList.add('active');
     }
 }
+
+
+//
+// function Car(name){
+//     debugger;
+//     this.name = name;
+//     this.start = function (){
+//         console.log(this.name+' стартанула');
+//     }
+//
+// }
