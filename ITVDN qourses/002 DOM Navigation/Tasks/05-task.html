@@ -478,8 +478,9 @@
         ];
 
         function showAllEmails() {
-            console.log("Электронные адреса пользователей:")
-            users.forEach(user => console.log(user.email));
+            // console.log("Электронные адреса пользователей:")
+            // users.forEach(user => console.log(user.email));
+            users.forEach(user => document.querySelector('#emailAddressesOutput').innerHTML += user.email+'<br />');
         }
 
         function showHigestFriendCount() {
@@ -494,7 +495,8 @@
 
             users
                 .filter(user => user.friends.length == max)
-                .forEach(user => console.log(user.name.first + " " + user.name.last));
+            //    .forEach(user => console.log(user.name.first + " " + user.name.last));
+                .forEach(user => document.querySelector('#greatesFriendsCountOutput').innerHTML += user.name.first + " " + user.name.last+'<br />');
         }
 
         function showMinMaxBalance() {
@@ -513,12 +515,14 @@
             console.log("Компании пользователей с наибольшим балансом:")
             users
                 .filter(user => user.balance == maxBalance)
-                .forEach(user => console.log(user.company));
+            //    .forEach(user => console.log(user.company));
+                .forEach(user => document.querySelector('#greatestBalanceCompanyOutput').innerHTML = user.company );
 
             console.log("Компании пользователей с наименьшим балансом:")
             users
                 .filter(user => user.balance == minBalance)
-                .forEach(user => console.log(user.company));
+                //.forEach(user => console.log(user.company));
+                .forEach(user => document.querySelector('#lowestBalanceCompanyOutput').innerHTML = user.company );
         }
 
         showAllEmails();
