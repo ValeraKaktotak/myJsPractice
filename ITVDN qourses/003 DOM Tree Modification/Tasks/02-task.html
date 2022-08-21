@@ -36,6 +36,20 @@
         { name: "Thursday", isWorkDay: true },
         { name: "Friday", isWorkDay: true },
         { name: "Saturday", isWorkDay: false }];
+
+        let firstDiv = document.querySelector('body div:nth-child(1)')
+        let secondDiv = document.querySelector('body div:nth-child(2)')
+
+       days.forEach(item => {
+           let myPar = document.createElement('p');
+           let myText = document.createTextNode(item.name);
+           myPar.append(myText);
+           if(item.isWorkDay === true){
+               firstDiv.append(myPar);
+           }else{
+               secondDiv.append(myPar);
+           }
+       })
     </script>
 </body>
 

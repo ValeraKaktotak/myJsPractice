@@ -61,6 +61,21 @@
             }
         ];
 
+        let myTable = document.createElement('table');
+
+        function createTableCell(item){
+            let tr = document.createElement('tr');
+            tr.insertAdjacentHTML("beforeend", `<td>${item.month}</td>`);
+            tr.insertAdjacentHTML("beforeend", `<td>${item.amount}</td>`);
+            return tr;
+        }
+
+        source.forEach(item => {
+            //console.log(createTableCell(item));
+            myTable.append(createTableCell(item));
+        })
+
+        document.body.append(myTable);
     </script>
 </body>
 

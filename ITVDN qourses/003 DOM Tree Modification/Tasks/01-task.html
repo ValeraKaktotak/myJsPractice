@@ -19,6 +19,14 @@
         Разместите все созданные параграфы в div с id output
         */
         let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        let output = document.querySelector('#output');
+
+        days.forEach(item => {
+            let myPar = document.createElement('p');
+            let myText = item;
+            myPar.append(myText);
+            output.append(myPar);
+        });
     </script>
 </body>
 

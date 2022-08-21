@@ -62,6 +62,14 @@
         (В прошлом уроке были рассмотрены примеры, показывающие как получить доступ к родительским элементам, так как 
         удалять нужно не ячейку td, в которой находится значение, а строку tr, в которой расположена эта ячейка).
         */
+
+        let myTable = document.querySelectorAll('#statsTable tr');
+        myTable.forEach(item => {
+            console.log(item.lastElementChild);
+            if(item.lastElementChild.textContent < 100){
+                item.remove();
+            }
+        })
     </script>
 </body>
 
