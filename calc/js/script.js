@@ -18,6 +18,10 @@ function numberAction (event){
 }
 buttonNumbers.forEach(element => element.addEventListener('click', numberAction))
 
+// buttonNumbers.forEach(function(element) {
+//     element.addEventListener('click', numberAction)
+// });
+
 // ф-ция очистки данных в табло
 var clearButton = document.getElementById('clear')
 function clearAction(){
