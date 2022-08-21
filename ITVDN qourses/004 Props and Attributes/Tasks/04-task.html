@@ -30,6 +30,14 @@
         Задание:
         Для элементов с атрибутом data-status="expired" сделайте рамку красного цвета. Для элементов с атрибутом data-status="completed" выведите рамку зеленого цвета.
         */
+        let elements = document.querySelectorAll('.task')
+        elements.forEach(item => {
+            if(item.dataset.status === 'completed'){
+                item.style.border = '3px solid green';
+            }else if(item.dataset.status === 'expired'){
+                item.style.border = '3px solid red';
+            }
+        })
     </script>
 </body>
 

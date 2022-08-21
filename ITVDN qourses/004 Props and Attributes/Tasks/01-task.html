@@ -16,6 +16,11 @@
         Задание:
         Напишите сценарий, который поменяет цвет текста элементов div, на тот, который указан в качестве значения атрибута data-color
         */
+        let myDiv = document.querySelectorAll('[data-color]');
+        myDiv.forEach(item => {
+            let divColor = item.dataset.color;
+            item.style.background = divColor;
+        })
     </script>
 </body>
 </html>
