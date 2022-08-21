@@ -30,6 +30,9 @@
         .user-card ul {
             list-style: none;
         }
+        .user-border {
+            border: 2px solid red;
+        }
     </style>
 </head>
 
@@ -493,7 +496,7 @@
                 ul.insertAdjacentHTML("beforeend", `<li>${friend.name}</li>`);
             }
             if (user.friends.length < 5) {
-                div.style.border ="2px solid red";
+                div.classList.add('user-border');
             }
 
             div.append(ul);

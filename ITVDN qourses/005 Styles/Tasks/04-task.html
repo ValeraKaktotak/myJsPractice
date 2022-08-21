@@ -66,6 +66,15 @@
         Напишите сценарий, который добавит класс attention строкам таблицы, в которых во второй колонке находятся значения меньше 100.
         */
 
+        let myTable = document.querySelector('#statsTable');
+        let myStr = myTable.querySelectorAll('tr td:nth-child(2)');
+
+        myStr.forEach(item => {
+            if(item.textContent < 100){
+                item.closest('tr').classList.add('attention');
+            }
+        })
+
         </script>
 </body>
 
