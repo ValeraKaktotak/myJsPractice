@@ -40,12 +40,19 @@
         input2 сделайте, в случае ошибки, #input2Error видимым.
         */
         let input1 = document.querySelector("#input1");
-        let input3 = document.querySelector("#input2");
+        let input2 = document.querySelector("#input2");
 
         let addBtn = document.querySelector("#add-btn");
         let remBtn = document.querySelector("#rem-btn");
         let mulBtn = document.querySelector("#mul-btn");
         let divBtn = document.querySelector("#div-btn");
+        let resetBtn = document.querySelector("#reset-btn");
+
+        function check (value1, value2) {
+            if(value1.value === ""){
+                value1.nextElementSibling('.error').toggle();
+            }
+        }
 
         addBtn.addEventListener("click", function () {
             alert(Number(input1.value) + Number(input2.value));
@@ -62,6 +69,12 @@
         divBtn.addEventListener("click", function () {
             alert(input1.value / input2.value);
         });
+
+        resetBtn.addEventListener("click", () => {
+            input1.value = 0;
+            input2.value = 0;
+        });
+
     </script>
 </body>
 
