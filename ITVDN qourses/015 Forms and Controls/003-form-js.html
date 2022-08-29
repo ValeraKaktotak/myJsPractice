@@ -40,8 +40,8 @@
     <script>
         // Способы получения форм текущего документа
         let form1 = document.forms.loginForm; // получение формы с атрибутом name=loginForm
-        let form2 = document.forms[0]; // получение первой формы в документе
-        let form3 = document.querySelector("[name=loginForm]"); // через CSS селектор
+    //    let form2 = document.forms[0]; // получение первой формы в документе
+    //    let form3 = document.querySelector("[name=loginForm]"); // через CSS селектор
 
         document.querySelector("#checkFormButton").addEventListener("click", function () {
             // все элементы, содержащиеся в форме, доступны через коллекцию elements на объекте формы
@@ -50,7 +50,6 @@
                 console.log(element.name + " = " + element.value);
             }
         });
-
         document.querySelector("#checkValuesButton").addEventListener("click", function () {
             // получить доступ к элементу управления можно по имени на коллекции elements объекта form
             // form.elements.<element-name>
