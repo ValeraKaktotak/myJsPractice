@@ -17,14 +17,12 @@
             let url1 = "https://images-assets.nasa.gov/image/PIA16239/PIA16239~orig.jpg";
             let url2 = "https://images-assets.nasa.gov/image/PIA22312/PIA22312~orig.jpg";
 
-            // let promise1 = downloadImage(url1);
-            // promise1.then(image => document.body.append(image), e => console.log(e.message))
+            let promise1 = downloadImage(url1);
+            promise1.then(image => document.body.append(image), e => console.log(e.message))
 
-            // let promise2 = downloadImage(url2);
-            // promise2.then(image => document.body.append(image), e => console.log(e.message));
+            let promise2 = downloadImage(url2);
+            promise2.then(image => document.body.append(image), e => console.log(e.message));
 
-            downloadImage(url1);
-            downloadImage(url2);
         });
 
         function downloadImage(url) {
@@ -41,8 +39,7 @@
                 }
             });
             
-            //return promise;
-            promise.then(image => document.body.append(image), e => console.log(e.message));;
+            return promise;
         }
     </script>
 </body>
