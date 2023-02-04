@@ -76,3 +76,12 @@ Example(Input --> Output)
 function addLength(str) {
   return str.split(' ').map((word) => `${word} ${word.length}`)
 }
+
+//******************************************************************************************************** */
+/**
+ * Implement a function which convert the given boolean value into its string representation.
+ */
+function booleanToString(b) {
+  return b.toString()
+}
+//******************************************************************************************************** */
