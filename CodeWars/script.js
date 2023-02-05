@@ -84,4 +84,52 @@ function addLength(str) {
 function booleanToString(b) {
   return b.toString()
 }
+
 //******************************************************************************************************** */
+/**
+ * There's a "3 for 2" (or "2+1" if you like) offer on mangoes. For a given quantity and price (per mango), calculate the total cost of the mangoes.
+ */
+
+function mango(quantity, price) {
+  return quantity > 2 ? (quantity - Math.floor(quantity / 3)) * price : quantity * price
+}
+
+//******************************************************************************************************** */
+/**
+ * Notes:
+Two objects that return a one word name in response to the first letter of the first name and one for the first letter of the surname are already given. See the examples below for further details.
+
+If the first character of either of the names given to the function is not a letter from A - Z, you should return "Your name must start with a letter from A - Z."
+
+Sometimes people might forget to capitalize the first letter of their name so your function should accommodate for these grammatical errors.
+ */
+function aliasGen(first, last) {
+  let auxFirst = first[0].toUpperCase()
+  let auxLast = last[0].toUpperCase()
+
+  if (firstName[auxFirst] && surname[auxLast]) {
+    return firstName[auxFirst] + ' ' + surname[auxLast]
+  } else {
+    return 'Your name must start with a letter from A - Z.'
+  }
+}
+
+//******************************************************************************************************** */
+/**
+ * Write a function that takes a list of strings as an argument and returns a filtered list containing the same elements but with the 'geese' removed.
+
+The geese are any strings in the following array, which is pre-populated in your solution:
+
+  ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]
+For example, if this array were passed as an argument:
+
+ ["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]
+Your function would return the following array:
+
+["Mallard", "Hook Bill", "Crested", "Blue Swedish"]
+ */
+
+function gooseFilter(birds) {
+  var geese = ['African', 'Roman Tufted', 'Toulouse', 'Pilgrim', 'Steinbacher']
+  return birds.filter((b) => !geese.includes(b))
+}
