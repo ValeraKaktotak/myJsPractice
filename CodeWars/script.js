@@ -133,3 +133,32 @@ function gooseFilter(birds) {
   var geese = ['African', 'Roman Tufted', 'Toulouse', 'Pilgrim', 'Steinbacher']
   return birds.filter((b) => !geese.includes(b))
 }
+
+//******************************************************************************************************** */
+/**
+ * Clock shows h hours, m minutes and s seconds after midnight.
+
+Your task is to write a function which returns the time since midnight in milliseconds.
+ */
+
+function past(h, m, s) {
+  return (h * 3600 + m * 60 + s) * 1000
+}
+
+//******************************************************************************************************** */
+/**
+ * Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
+ */
+function invert(array) {
+  return array.map((item) => -item)
+}
+
+//******************************************************************************************************** */
+/**
+ * Write a function that accepts an integer n and a string s as parameters, and returns a string of s repeated exactly n times.
+ */
+function repeatStr(n, s) {
+  return s.repeat(n)
+}
+
+//******************************************************************************************************** */
